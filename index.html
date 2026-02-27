@@ -43,15 +43,15 @@
   </style>
 </head>
 <body>
-  <textarea id="input" placeholder="Escribe: pabaras y letras cortas"></textarea>
+  <textarea id="input" placeholder="Intenta escribir: hongos, lagunas, sol"></textarea>
 
   <script>
     const hydra = new Hydra({ detectAudio: false });
 
     const palabras = {
-      Hongos: () => noise(4,1).kaleid(81,8,33).rotate(() => time * 15).color(0.49,0.423,1).out(),
-      Lagunas: () => noise(15,4).rotate(() => time * 0.1).scale(() => Math.sin(time*99)*44 + 1.5).color(0.2, 0.8, 0.9).out(),
-      Sol: () => voronoi(4,0.2,1.5).color(77,3,1).modulate(osc(7,0.02,10),0.5).rotate(()=> time * 2).out(),
+      hongos: () => noise(4,1).kaleid(81,8,33).rotate(() => time * 15).color(0.49,0.423,1).out(),
+      lagunas: () => noise(15,4).rotate(() => time * 0.1).scale(() => Math.sin(time*99)*44 + 1.5).color(0.2, 0.8, 0.9).out(),
+      sol: () => voronoi(4,0.2,1.5).color(77,3,1).modulate(osc(7,0.02,10),0.5).rotate(()=> time * 2).out(),
 
 b: () => osc().modulate(noise(),0.25).scale([1,3,6],5).colorama(-0.40).colorama(1),
 c: () => noise(15).modulate(voronoi(3,2,5)).kaleid(30).colorama(0.40).colorama(0.5).scale(1),
